@@ -1,7 +1,7 @@
 ## "Season Progress" Twitter bot
 
 This code is behind the [season progress](https://twitter.com/progress_season) Twitter bot. It uses the Tweepy Python 
-library.
+library and v2 Twitter API.
 
 Setup:
 
@@ -12,7 +12,8 @@ Setup:
 
 ## Setting up `.env` file
 
-This bot reads your Twitter API credentials from a `.env` file. You must create this file yourself and place it in the same folder as `bot.py`. 
+This bot reads your Twitter API v2 credentials from a `.env` file. You must create this file yourself and place it in the same folder as `bot.py`.
+
 
 The file should look like this:
 
