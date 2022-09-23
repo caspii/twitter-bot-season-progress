@@ -5,7 +5,7 @@ library and v2 Twitter API.
 
 Setup:
 
-1. Install a virtual environment: `python3.9 -m venv venv/ `
+1. Install a virtual environment: `python3.9 -m venv venv/`
 2. Activate virtual environment: `source venv/bin/activate`
 3. [Get your Twitter API credentials](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api) and create a `.env` file. See next section.
 4. Execute bot: `python bot.py`
