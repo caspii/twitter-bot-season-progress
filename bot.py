@@ -22,7 +22,7 @@ seasons = [
 
 current_season = 0
 
-# Winter still missing, because this bot is les than 3 seasons old
+# Winter still missing, because this bot is less than 3 seasons old
 
 season_start = [
     date(2022, 9, 22),  # Autumn
