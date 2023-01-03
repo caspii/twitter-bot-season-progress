@@ -1,3 +1,7 @@
+# TODO:
+# - current_season variable should be set automatically
+# - season_start dict should not use year
+
 import os
 from datetime import date
 from math import floor
@@ -15,38 +19,31 @@ client = tweepy.Client(
 
 seasons = [
     "autumn",
+    "winter",
     "spring",
     "summer",
-    "winter",
 ]
 
-current_season = 0
-
-# Winter still missing, because this bot is less than 3 seasons old
+current_season = 1
 
 season_start = [
     date(2022, 9, 22),  # Autumn
-    date(2022, 3, 20),  # Spring
-    date(2022, 6, 21),  # Summer
-    ]
-
-season_end = [
-    date(2022, 12, 21),  # Autumn
-    date(2022, 6, 21),  # Spring
-    date(2022, 9, 22),  # Summer
+    date(2022, 12, 22), # Winter
+    date(2023, 3, 20),  # Spring
+    date(2023, 6, 21),  # Summer
     ]
 
 season_total_days = 90
-current_delta_days = (date.today() - season_start[current_season]).days
-season_days_left = (season_end[current_season] - date.today()).days
+days_into_season = (date.today() - season_start[current_season]).days
+season_days_left = 90 - days_into_season
 
-print(f"Let's do this! {season_days_left=}")
+print(f"Let's do this! {season_days_left=} {days_into_season=}")
 
 if season_days_left == 0:
     tweet = f"Summer is complete! It's Autumn now 🍁🍂☀☔️️"
 
 elif season_days_left > 0:
-    percent_done = current_delta_days / season_total_days
+    percent_done = days_into_season / season_total_days
     progress = ""
     for i in range(0, 10):
         if i < floor(percent_done * 10):
