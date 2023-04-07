@@ -24,7 +24,7 @@ seasons = [
     "summer",
 ]
 
-current_season = 1
+current_season = 2
 
 season_start = [
     date(2022, 9, 22),  # Autumn
@@ -39,8 +39,11 @@ season_days_left = 90 - days_into_season
 
 print(f"Let's do this! {season_days_left=} {days_into_season=}")
 
+if season_days_left < 0:
+    print("Season is over!")
 if season_days_left == 0:
-    tweet = f"Summer is complete! It's Autumn now 🍁🍂☀☔️️"
+    #tweet = f"Summer is complete! It's Autumn now 🍁🍂☀☔️️"
+    tweet = f"Spring is complete! It's Summer now 🌻⛱️🐝️"
 
 elif season_days_left > 0:
     percent_done = days_into_season / season_total_days
